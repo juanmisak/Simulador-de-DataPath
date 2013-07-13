@@ -1,0 +1,32 @@
+/*hoja de estilos*/
+img.bg {
+            /* Establezca reglas para el relleno de fondo */
+            min-height: 40%;
+            min-width: 40%;
+            
+            /* Establecer la escala proporcional */
+            width: 40%;
+            height: 40%;
+            
+            /* Establecer posicion */
+            position: fixed;
+            top: 0;
+            left: 0;
+    }
+        
+        @media screen and (max-width: 1024px){
+            img.bg {
+                left: 50%;
+                margin-left: -512px; }
+        }
+
+#instrucciones{
+float: left;
+height: 100px;
+width: 40px;
+}
+#dataPath{
+float: right;
+height: 100px;
+width: 40px;
+}
