@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Proyecto Parcial</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1>Computer and Organization and Design</h1>          
+        </div>
+      </div>
+      <nav>
+        <div id="menu_container">
+          <ul class="sf-menu" id="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="write_up.html">Write-up</a></li>
+            <li><a href="bitacora.html">Bitácora</a></li>         
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div id="site_content">
+      <div id="sidebar_container">
+        <div class="sidebar">
+          <h3>Latest News</h3>
+          <h4>New Website Projet</h4>
+          <h5>January 20th, 2013</h5>
+          <p>Escuela Superior Politécnica del Litoral.<br /> Facultad de Ingenieria en Electronica y Computacion. <br /> Ingenieria en Ciencias Computacionales.<br /><a href="#">Read more</a></p>
+        </div>
+        <div class="sidebar">
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="#">Espol</a></li>
+            <li><a href="#">Fiec</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">FaceBook</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <h1>Welcome to Computer and Organization and Design <br /> Descripcion del proyecto parcial : <br /> Pseudo random   </h1>
+        <h1>Instructor : Ph.D. Sixto García Aguilar</h1>
+        <p>1.	Implemente un arreglo que actuará como un arreglo de 11 contadores.  Inicialícelo con ceros. 
+        	<br />2.	Pida al usuario el ingreso de 17 números aleatorios dentro del rango de 32000 y 64000, y guárdelos en un arreglo. 
+        	<br />3.	Ordene los números del arreglo y encuentre la mediana (en este caso el número en la posición 9 ).
+        	<br />4.	Realice la operación AND  entre la mediana y cada número del arreglo de la parte 2 (esto incluye la mediana) y guarde los resultados en un nuevo arreglo.
+        	<br />5.	En el nuevo arreglo desplace lógicamente 5 posiciones a la derecha a cada número del arreglo.
+        	<br />6.	Con los números obtenidos en el paso 4, utilice tan solo los cinco bits menos significativos y obtenga un nuevo arreglo de números en el rango de 0 a 31.  Con estos últimos números realice la operación mod 11 y obtendrá números entre 0 y 10.  
+        	<br />7.	Por cada número resultante del paso 6, incremente el contador respectivo. 
+        	<br />8.	Desplace lógicamente 5 posiciones a la izquierda a los números del arreglo del paso 4.
+        	<br />9.	Retorne al paso 3.
+        </p>Realice 100 iteraciones de los pasos del 3 al 9 y en cada iteración aumente el contador correspondiente para llevar un registro de las veces que aparece cada número entre 0 y 10.
+			Finalmente, imprima en pantalla las frecuencias y en un documento grafique dicha frecuencia y determine a qué distribución se asemeja.
+		</p>			
+			 <img src="images/organizacion.png" width="650px" /> 
+      </div>
+    </div>
+    <footer>
+      <p>Computer and Organization and Design <br/>Integrantes : Esteban Daniel Muñoz  y Juan Mite Lindao</p>
+    </footer>
+  </div>
+  <p>&nbsp;</p>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
+</body>
+</html>

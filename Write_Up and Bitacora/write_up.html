@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Proyecto Parcial</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1>Computer and Organization and Design</h1>          
+        </div>
+      </div>
+      <nav>
+        <div id="menu_container">
+          <ul class="sf-menu" id="nav">
+            <li><a href="index.html">Home</a></li>
+     		<li><a href="write_up.html">Write-up</a></li>
+            <li><a href="bitacora.html">Bitácora</a></li>   
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div id="site_content">
+       <div id="sidebar_container">
+        <div class="sidebar">
+          <h3>Latest News</h3>
+          <h4>New Website Projet</h4>
+          <h5>January 20th, 2013</h5>
+          <p>Escuela Superior Politécnica del Litoral.<br /> Facultad de Ingenieria en Electronica y Computacion. <br /> Ingenieria en Ciencias Computacionales.<br /><a href="#">Read more</a></p>
+        </div>
+        <div class="sidebar">
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="#">Espol</a></li>
+            <li><a href="#">Fiec</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">FaceBook</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <h1>Manual de usuario</h1> 
+        <img src="images/uno.png" width="650px" />            
+        <p>La imagen muestra el inicio del programa </p>   
+        <img src="images/dos.png" width="650px" />   
+      	<p>A continuación se muestra un pequeño menú en el que presenta los integrantes del grupo y pide al usuario que ingrese el número de elementos que tendrá el arreglo, a continuación se presenta un pequeño mensaje que pregunta al usuario que ingrese un numero entre los valores indicados en el mismo , si por error el usuario se sale del rango 
+      		e ingresa un numero erróneo se le vuelve a recalcar al usuario entre que rangos deben estar finalmente una vez ingresado los 17 elementos en el arreglo.Se visualiza en la consola dichos valores y se indica la mediana de la misma como se muestra en la imagen.</p>  
+   		<img src="images/tres.png" width="650px" />   
+   		<p>Se puede observar claramente los valores ordenados de forma acendente y se muestra la mediana del arreglo el cual nos permitira hacer la operacion and con la mediana y cada uno de los valores del arreglo ordenado.</p> 
+      </div>
+    </div>
+    <footer>
+      <p>Computer and Organization and Design <br/>Integrantes : Esteban Daniel Muñoz  y Juan Mite Lindao</p>
+    </footer>
+  </div>
+  <p>&nbsp;</p>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
+</body>
+</html>
