@@ -14,8 +14,28 @@ function loadMedia(){
 	fondo = new Image();
 	fondo.src='fondos/aa.jpg';
 	fondo.onload = function(){
-	 var intervalo = window.setInterval(frameLoop,1000/55);
-	}
+	 var intervalo = window.setInterval(frameLoop,1000/55);}
+	 
+	IM = new Image();
+	IM.src='fondos/IM.jpg';
+	IM.onload = function(){
+	 var intervalo = window.setInterval(frameLoop,1000/55);}
+	 
+	DM= new Image();
+	DM.src='fondos/DM.jpg';
+	DM.onload = function(){
+	 var intervalo = window.setInterval(frameLoop,1000/55);}
+
+	REG= new Image();
+	REG.src='fondos/REG.jpg';
+	REG.onload = function(){
+	 var intervalo = window.setInterval(frameLoop,1000/55);}
+	 
+	ALU = new Image();
+	ALU.src='fondos/ALU.jpg';
+	ALU.onload = function(){
+	 var intervalo = window.setInterval(frameLoop,1000/55);}
+
 }
 function drawBackground(){
 	ctx.drawImage(fondo,20,40);
@@ -24,34 +44,36 @@ function drawBackground(){
 function simular(){
 	for(var i in disparos){
 		var disparo = disparos[i];
-		disparo.x +=1;
-		disparo.y -=1;
+		disparo.x +=0.3;
+		disparo.y -=0.3;
 	}
 	disparos = disparos.filter(function(disparo){
 		return disparo.x < 940;
 	});
 	
 		disparos = disparos.filter(function(disparo){
-		return disparo.y > 40;
+		return disparo.y > 70;
 	});
 }
 
 function tiro(){
-	for(var i=0;i<5;i++){
 	disparos.push({
-	x:nave.x + 100*i,
-	y:nave.y -10,
+	x:nave.x +10,
+	y:nave.y -15,
 	width: 50,
 	height: 50
 	});
 	
-}}
+}
 function dibujarDisparos(){
 	ctx.save();
-	ctx.fillStyle = 'black';
 	for (var i in disparos){
 		var disparo = disparos[i];
-		ctx.fillRect(disparo.x,disparo.y,disparo.width,disparo.height);
+			ctx.drawImage(IM,disparo.x,disparo.y-30);
+			ctx.drawImage(REG,disparo.x+70,disparo.y-30);
+			ctx.drawImage(ALU,disparo.x+140,disparo.y-30);
+			ctx.drawImage(DM,disparo.x+210,disparo.y-30);
+			ctx.drawImage(REG,disparo.x+280,disparo.y-30);			
 	}
 	ctx.restore();
 }
