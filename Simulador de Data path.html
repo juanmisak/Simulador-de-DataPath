@@ -1,43 +1,38 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>-- Simulador O.A.C. --</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css" >
-
 </head>
 <!--cuerpo de la pagina-->
 <body background="fondos/dp.jpg">
-	<div id= "titulo">
+    <div id= "titulo">
 		<p align="center" align="top">Pipeline Simulator</p>
 	</div>
-<!--encabezado-->
-			
-			<!--contenedor de las instrucciones-->
-			<section id ="contenedor">
-				<header id= "instrucciones">				
-					<p align="center" align="top">MIPS Code</p>
-					<input id="play" type="button" value="► Play" onclick="simular()"/>
-					<textarea class="code_input" id="textareaCode" rows="12" cols="13">
-					</textarea>
-					
-				</header>
-			<!--contenedor del pipeline-->		
-				<article id= "dataPath">
-					<p align="center" align="top">Pipeline</p>
-					<div>
-						<canvas id='juegoAtari' width = "990" height ="700"></canvas>
-						    <script src = 'javascript/main.js'></script>
-					</div>
-				</article>
-			</section>
-		
+    <!--encabezado-->
+    <!--contenedor de las instrucciones-->
+	<section id ="contenedor">
+        <header id= "instrucciones">
+            <p align="center" align="top">MIPS Code</p>
+			<input id="play" type="button" value="► Play" onclick="simular()"/>
+			<textarea class="code_input" id="textareaCode" rows="12" cols="13">	
+			</textarea>
+        </header>
+		<!--contenedor del pipeline-->		
+		<article id= "dataPath">
+            <p align="center" align="top">Pipeline</p>
+            <div>
+                <canvas id='juegoAtari' width = "990" height ="700"></canvas>
+                <script src = 'javascript/main.js'></script>
+            </div>
+		</article>
+	</section>		
 </body>
-
 <!--Derechos de autor-->
 <footer>
-		<div id="pie" align="center">
-			<span> Developers: Juan Mite, Esteban Muñoz ©copyrigth 2013</span>                    
-		</div>
+    <div id="pie" align="center">
+        <span>Developers: Juan Mite, Esteban Muñoz ©copyrigth 2013</span>
+    </div>
 </footer>
 </html>
