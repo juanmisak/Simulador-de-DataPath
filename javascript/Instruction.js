@@ -133,6 +133,19 @@ function Instruction(instruction) {
             immediate = t3;
             opcodeInstructionI(operation);
             break;
+        case 2:
+            //Example lw $t1,32($t2)
+            this.rt = t1.substring(1);  
+            this.rs = Integer.parseInt(t2.substring(t2.indexOf("$") + 1, t2.indexOf(")")));
+            if (rt < 1 || rt > 31 || rs < 0 || rs > 31)
+            {
+                alert("Invalid Instr: register out of bounds");               
+            }
+            this.immediate = Integer.parseInt(t2.substring(0, t2.indexOf("(")));
+
+
+
+
         default:
 
     }
