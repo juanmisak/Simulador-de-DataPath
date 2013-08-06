@@ -39,6 +39,11 @@ img.bg {
 	font-family: Verdana;font-size:33px;
 	color: white;
 	}
+	
+#instruccion,#registroDestino,#registro1,#registro2{
+	width: 40px;
+	
+}
 #dataPath{
 	
 	float: right;
