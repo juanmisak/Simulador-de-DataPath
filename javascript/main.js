@@ -9,6 +9,9 @@ var disparos = [];
 var enemigos = [];
 var nave = {x:25,y:550,width:1,height:1};
 var juego = { estado : 'iniciando'};
+var R = ["add","sub","mul"];
+var I = [];
+var J = [];
 
 function loadMedia(){
 	fondo = new Image();
@@ -82,6 +85,9 @@ function agregarEventosTeclado() {
 	 agregarEvento(document,'keydown',function(e){
 	 teclado[e.keyCode]=true;
 	 });
+	 
+	 agregarEvento(document.getElementById("play"),'click',dibujarDisparos());
+	 
 	 agregarEvento(document,'keyup',function(e){
 	 teclado[e.keyCode]=false;
 	 });
@@ -125,6 +131,10 @@ function dibujarNave(){
 	ctx.fillRect(nave.x, nave.y, nave.width, nave.height);
 	ctx.restore();
 }
+
+var el = document.getElementById("play");
+el.addEventListener("click",dibujarDisparos, false);
+
 
 function frameLoop(){
 	moverNave();

@@ -40,7 +40,16 @@ img.bg {
 	color: white;
 	}
 	
-#instruccion,#registroDestino,#registro1,#registro2{
+#instruccion,#registroDestino,#registro1,#registro2,
+#instruccion1,#registroDestino1,#registro11,#registro12,
+#instruccion2,#registroDestino2,#registro21,#registro22,
+#instruccion3,#registroDestino3,#registro31,#registro32,
+#instruccion4,#registroDestino4,#registro41,#registro42,
+#instruccion5,#registroDestino5,#registro51,#registro52,
+#instruccion6,#registroDestino6,#registro61,#registro62,
+#instruccion7,#registroDestino7,#registro71,#registro72,
+#instruccion8,#registroDestino8,#registro81,#registro82,
+#instruccion9,#registroDestino9,#registro91,#registro92{
 	width: 40px;
 	
 }
