@@ -4,26 +4,30 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>-- Simulador O.A.C. --</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css" >
+    <script type="text/javascript" src="main.js"></script>
 </head>
 <!--cuerpo de la pagina-->
 <body background="fondos/dp.jpg">
     <div id= "titulo">
 		<p align="center" align="top">Pipeline Simulator</p>
 	</div>
+	
 <!--encabezado-->
 			
 			<!--contenedor de las instrucciones-->
 			<section id ="contenedor">
 				<header id= "instrucciones">				
 					<p align="center" align="top">MIPS Code</p>
-					<input id="play" type="button" value="► Play  " onclick="dibujarDisparos()"/>
-					<input id="pause" type="button" value="Pause  " onclick="pause()"/>
-					<input id="stop" type="button" value="Stop  " onclick="stop()"/>
+
+					<input id="play" type="button" value=" ► " onclick="play()"/>
+					<input id="pause" type="button" value="Pause" onclick="pause()"/>
+					<input id="stop" type="button" value=" ■ " onclick="stop()"/>
+					<input type="button" value="Clear" onclick="window.location.reload()"/>
 										
-					<input id="instruccion" type="text"/>
-					<input id="registroDestino" type="text"/>
-					<input id="registro1" type="text"/>
-					<input id="registro2" type="text"/>
+					<input id="instruccion0" type="text"/>
+					<input id="registroDestino0" type="text"/>
+					<input id="registro01" type="text"/>
+					<input id="registro02" type="text"/>
 					
 					<input id="instruccion1" type="text"/>
 					<input id="registroDestino1" type="text"/>
@@ -71,10 +75,10 @@
 					<input id="registro92" type="text"/>
 					        
 			<div class="campo">
-                <select id="etapas" class="input" required>
-                    <option value="1">Opciones de solución</option>
-                    <option value="2">Ver los Hazards</option>
-                    <option value="3">Solución por NOP operations</option>
+                <select id="etapas">
+                    <option value="1"selected="selected"> Ways of solución</option>
+                    <option value="2">See the Hazards </option>
+                    <option value="3">Solution by NOP operations</option>
                     
                 </select>
             </div>
@@ -83,7 +87,7 @@
 				<article id= "dataPath">
 					<p align="center" align="top">Pipeline</p>
 					<div>
-						<canvas id='juegoAtari' width = "990" height ="700"></canvas>
+						<canvas id='juegoAtari' width = "990" height ="700"/>
 						    <script src = 'javascript/main.js'></script>
 					</div>
 				</article>
@@ -92,7 +96,7 @@
 <!--Derechos de autor-->
 <footer>
     <div id="pie" align="center">
-        <span>Developers: Juan Mite, Esteban Muñoz ©copyrigth 2013</span>
+        <span>Developers: Juan Mite, Esteban Muñoz -O.A.C. ESPOL- ©copyrigth 2013</span>
     </div>
 </footer>
 </html>
