@@ -12,8 +12,8 @@ var inicio = {x:25,y:250,width:1,height:1};
 
 var R = ["add","sub","mul"];
 var I = ["sw","lw"];
-var T = ["$t0","$t1","$t2","$t3","$t4","$t5","$t6","$t7","$t8","$t9","$s0","$s1",
-"$s2","$s3","$s4","$s5","$s6","$s7","$a0","$a1","$a2","$a3","$a4","$a5","$a6","$a7"];
+var T = ["$zero","$v0","$v1","$a0","$a1","$a2","$a3","$t0","$t1","$t2","$t3","$t4","$t5","$t6","$t7","$s0","$s1",
+"$s2","$s3","$s4","$s5","$s6","$s7","$t8","$t9","$k0","$k1","$gp","$sp","$fp","$ra"];
 
 function loadMedia(){
 	fondo = new Image();
@@ -197,7 +197,7 @@ function play() {
 		return null;
 	}}
 	
-		/*rd=document.getElementById("registroDestino"+i);
+		rd=document.getElementById("registroDestino"+i);
 		r1=document.getElementById("registro"+i+"1");
 		r2=document.getElementById("registro"+i+"2");
 	bandera = false;
@@ -207,7 +207,7 @@ function play() {
 	if(!bandera){
 		alert("¿"+ rd.value+", "+r1.value+", "+ r2.value+"? ¡Uno de ellos NO es un registro MIPS!  ");
 		return null;
-	}}*/
+	}}
 
 	lineaDePipe(n);
 }
