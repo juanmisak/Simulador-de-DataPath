@@ -10,8 +10,8 @@ var PipesNO =[];
 var hazards = [];
 var inicio = {x:25,y:250,width:1,height:1};
 
-var R = ["add","sub","mul"];
-var I = ["sw","lw"];
+var R = ["lw","add","sub","mul"];
+
 var T = ["$zero","$v0","$v1","$a0","$a1","$a2","$a3","$t0","$t1","$t2","$t3","$t4","$t5","$t6","$t7","$s0","$s1",
 "$s2","$s3","$s4","$s5","$s6","$s7","$t8","$t9","$k0","$k1","$gp","$sp","$fp","$ra"];
 
@@ -90,7 +90,7 @@ function simular(){
 	});
 	
 }	
-	function addHazard(xini,yini,xfin,yfin){
+function addHazard(xini,yini,xfin,yfin){
 		hazards.push({
 		x1:xini,
 		y1:yini,
@@ -112,24 +112,35 @@ function lineaDePipe(n){
 	
 	
 function LineaNO(n){
-	for(i=1 ; i<=n;  i++){
+	
+	Pipes.push({
+	x:inicio.x -70,
+	y:inicio.y -145-70,
+	width: 50,
+	height: 50
+	});	
+		
+
+	for(i=1; i<=n; i++){
 	Pipes.push({
 	x:inicio.x - i*70,
 	y:inicio.y -145-70*i,
 	width: 50,
 	height: 50
 	});	
+		
+	if(i==n){
 	
-	if(i==n)
 	{PipesNO.push({
-	x:inicio.x - i*70,
-	y:inicio.y -145-70*i,
+	x:inicio.x - i*140,
+	y:inicio.y -145-140*i,	
 	width: 50,
 	height: 50
-	});
-;}}
+	});}
 
-}
+	}
+
+}}
 function dibujarHazards() {	
 	ctx.save();
     for (var i in hazards) { 
@@ -186,6 +197,9 @@ function play() {
 	return null;}
 	}
 	
+	e = document.getElementById("etapas");
+	st = e.options[e.selectedIndex].value;
+	if(st==1)
 	for(i=0;i<n;i++){
 	bandera = true;
 	s=document.getElementById("instruccion"+i);
@@ -196,27 +210,26 @@ function play() {
 		alert("¿"+ s.value+"? ¡Eso NO es codigo MIPS!  ");
 		return null;
 	}}
-	
+	/*
 		rd=document.getElementById("registroDestino"+i);
 		r1=document.getElementById("registro"+i+"1");
 		r2=document.getElementById("registro"+i+"2");
 	bandera = false;
 	for(h=0;h<T.length;h++)	{
-		if((rd.value.toLowerCase() == T[h] )&&(r1.value.toLowerCase() == T[h] )&&( r2.value.toLowerCase() == T[h]))
+		if((rd.value.toLowerCase() == T[h] )||(r1.value.toLowerCase() != T[h] )||( r2.value.toLowerCase() == T[h])	)
 		bandera = true; 
 	if(!bandera){
 		alert("¿"+ rd.value+", "+r1.value+", "+ r2.value+"? ¡Uno de ellos NO es un registro MIPS!  ");
 		return null;
-	}}
+	}}*/
 
 	lineaDePipe(n);
 }
-	e = document.getElementById("etapas");
-	s = e.options[e.selectedIndex].value;
-	if(s==2)
-	verHazard(n);
-	if(s==3)
-	
+
+	else if(st==2){
+	lineaDePipe(n);
+	verHazard(n);}
+	else if(st==3)
 	nop(n);
 }
 
@@ -240,8 +253,9 @@ function nop(n) {
 	d2=document.getElementById("registro"+(j+1)+""+2);
 	
 	if(s.value == d.value || s.value == d2.value){
-	LineaNO(j);
-	cont++;}
+	
+	cont++;
+	LineaNO(j);}
 	
 	}}
 	alert("Se van a resolver "+cont +" hazard(s)!!!");
